@@ -1,0 +1,290 @@
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { max-width: 960px; margin: auto;
+ font-family: 'Karla', 'Source Sans Pro', Helvetica  sans-serif;
+ font-weight: 400; color: #555;  width: 100%; }
+ font-family: 'Karla', 'Source Sans Pro', HelveticaNeue  sans-serif;  font-size: 16px; font-weight: 400;  
+   }
+
+img {display: block; margin: auto; }
+
+
+
+
+/*---Text---*/
+
+h1 {
+  margin: 0 0 1em 0;
+  font-size: 2.8em;
+  font-weight: 700;
+
+}
+
+h2 {
+  
+  font-size: 2.1em;
+  font-weight: 700;
+ border-bottom: 2px solid #555;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0 0 .5em 0;
+  font-size: 1.3em;
+  font-weight: 700;
+
+}
+
+h4 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+
+
+a {  text-decoration: none;}
+
+a:visited { color: #555; }
+
+/* universal Nav styles */
+
+nav { padding: 0 0 0.3px 0; width: 100%;  margin: auto; } 
+
+nav ul { display: flex; list-style: none;} 
+
+nav li  { list-style: none; text-align: center; }
+
+nav li a { text-transform: uppercase;  color: #333; font-weight: 700;}
+
+.navbar {  display: flex; justify-content: center; align-items: center; margin: 1rem 0; }
+
+.navbar li a { display: block; padding: 0 1rem; max-width: 100%;}
+
+.navbar li a:hover { border-bottom: 2px solid; }
+
+
+/* Content Container (Each Page) */
+
+.content { margin: 4rem 0 5.25rem 0; }
+
+
+/* footer Styles */
+
+footer { width: 100%; height: auto; font-size: .8em; color: #999; clear: left; }
+
+.footer_content { display:  flex; flex-direction:column;  margin: auto; text-align: center; }
+.footer_content img {margin: auto; width: 100%;}
+.footer_content p, span { color: #555;  margin: 0.5rem auto;}
+.footer_logo { display:block; margin: 1rem auto; }
+.social { display: flex; justify-content: center; margin: 1rem auto; list-style: none;}
+.footer_item img {  padding: 0 10px; }
+.footer_item { justify-content: center; }
+a.contact_footer {display: block; margin: auto;  color:#555;  text-decoration: none;}
+.contact_footer h4:hover { border-bottom: 2px black solid; }
+.social li img:hover { border-bottom: 2px black solid; }
+
+/* INFO SITE
+-----------------------------------------------------------------------*/
+
+
+
+
+a.logo {  width:100%;  margin: auto;}
+
+a.logo img { display: block;  margin: auto; padding-left: 0.6rem; }
+
+.subheader { text-align: center; margin: 2rem ; }
+
+.index_content { margin: 0 auto 2rem auto; }
+
+p, .contact  { text-align: center; padding: 0 0.9rem; }
+
+.btn_container { display:flex; justify-content: center; ;width: 100%; margin: 1rem 0;}
+
+.btn:hover { background-color: #eee; }
+
+.btn { padding: 0.5rem 2rem; border: 1px #ccc solid; 
+      border-radius: 50px; text-decoration: none; color: #333;
+     transition: background 500ms ease; }
+
+.content_title { text-align: center; }
+
+
+
+
+
+/* PORTFOLIO SITE 
+-----------------------------------------------------------------------*/
+
+/* main content */ 
+
+.content { margin: 2rem auto; }
+.one_third { margin: 60px 20px; }
+.one_third img { width: 100%; } 
+
+
+
+/* CONTACT STYLES *
+-------------------------------------------------------------------------------------------------*/
+
+.statement { text-align: center; margin: 2rem 0 1rem 0; padding: 0 12px; }
+
+label { margin: 1rem 0; }
+
+
+/* form styles */
+
+.contact { padding: 0 15px; margin: 1rem 0 0 0; }
+
+.contact form { display:flex; flex-direction: column;}
+
+.contact form label { display: block; }
+
+.contact form .full {grid-column: 1 / 3;} /* this makes the message and submit elements span from 1/3 columns */
+
+.contact form button, .contact form input, .contact form textarea { width: 100%;
+  padding: 1em; border: 1px solid #555;} /* makes them on the same line */
+
+.contact form button { background: #555; color: #fff; border: 0; text-transform: uppercase; margin: 2rem 0;}
+
+/*------------------------------------------------------------------------*/
+
+/* media Queries info */
+
+@media screen only and (max-width: 520px) {
+
+.portfolio_container { width: 100%; display: block;}  a.logo { width: auto; }
+	
+.footer_item img { width: 10px;} 
+}
+
+@media only screen and ( min-width: 760px)  {
+
+a.logo { width: auto; } .portfolio_container { display: flex; } 
+.content { display: flex; flex-direction: column; }
+
+.one_third { margin: 4rem auto; max-width: 600px;}
+} 
+
+@media only screen and (min-width: 900px) {
+
+/* universal Queries */ 
+
+h4 { font-size: 1.2em; text-transform: uppercase; font-weight: 200; }
+
+  /* Hover Effect ---- "About" Page ----*/
+
+
+.hover_container { float: left; }
+
+  .image_content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.image_content .content_overlay {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.image_content:hover .content_overlay{
+  opacity: 0.8; background: #fff;
+}
+
+.image__content {
+  width: 100%; 
+
+}
+
+.content_details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.image_content:hover .content_details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content_details h4{
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+
+/*------ "Prints" media queries -------*/
+ 
+ .print_image_content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.print_image_content .content_overlay {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.print_image_content:hover .content_overlay{
+  opacity: 0.8; background: #fff;
+}
+
+.print_image_content:hover .content_details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+/* Digital Media Queries */
+
+.grid_container { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+
+
+
+
+
+}
+/*--- PUT IN GRID TEMPLATE WHEN MEDIA REACHES DESKTOP SIZE----*/
